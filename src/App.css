@@ -20,17 +20,14 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  /* background-color: var(--body-bg); */
   color: var(--txt-color);
-
   display: flex;
   justify-content: center;
   padding-top: 100px;
-
   height: 100vh;
 }
 
-.box {
+.box-file-dropper-draggable {
   background-color: var(--box-bg);
   padding: 30px;
   border-radius: 20px;

@@ -23,8 +23,8 @@ const defaultAcceptedFileTypes = [
 const DropFileInput: React.FC<DropFileInputProps> = (props) => {
   const {
     onFileChange,
-    maxFiles = 3,
-    multiple = false,
+    maxFiles = 8,
+    multiple = true,
     acceptedFileTypes = defaultAcceptedFileTypes,
   } = props;
 
@@ -115,7 +115,9 @@ const DropFileInput: React.FC<DropFileInputProps> = (props) => {
       </div>
       {fileList.length > 0 && (
         <div className="drop-file-preview">
-          <p className="drop-file-preview__title">Ready to upload</p>
+          <p className="drop-file-preview__title">
+            Archivos seleccionados ({fileList.length})
+          </p>
           {fileList.map((item, index) => (
             <div key={index} className="drop-file-preview__item">
               <img src={getImageSrc(item.type)} alt="type-file" />

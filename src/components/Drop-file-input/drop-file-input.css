@@ -1,14 +1,12 @@
 .drop-file-input {
   position: relative;
-  width: 400px;
-  height: 200px;
+  width: 370px;
+  height: 170px;
   border: 2px dashed var(--border-color);
   border-radius: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: var(--input-bg);
 }
 
@@ -31,15 +29,16 @@
   text-align: center;
   color: var(--txt-second-color);
   font-weight: 600;
-  padding: 10px;
+  padding: 5px;
+  font-size: 14px;
 }
 
 .drop-file-input__label img {
-  width: 100px;
+  width: 80px;
 }
 
 .drop-file-preview {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .drop-file-preview p {
@@ -47,7 +46,7 @@
 }
 
 .drop-file-preview__title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .drop-file-preview__item {
@@ -56,12 +55,20 @@
   margin-bottom: 10px;
   background-color: var(--input-bg);
   padding: 15px;
+  font-size: 14px;
   border-radius: 20px;
 }
 
 .drop-file-preview__item img {
   width: 50px;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+.drop-file-preview__item__info p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
 }
 
 .drop-file-preview__item__info {
@@ -81,6 +88,7 @@
   position: absolute;
   right: 10px;
   top: 50%;
+  font-size: 18px;
   transform: translateY(-50%);
   box-shadow: var(--box-shadow);
   cursor: pointer;
@@ -90,4 +98,19 @@
 
 .drop-file-preview__item:hover .drop-file-preview__item__del {
   opacity: 1;
+}
+
+.drop-file-preview {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.drop-file-preview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.drop-file-preview::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 10px;
 }

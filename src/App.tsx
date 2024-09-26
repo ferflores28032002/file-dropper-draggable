@@ -12,8 +12,7 @@ function App() {
   };
 
   return (
-    <div className="box">
-      <h2 className="header">React drop files input</h2>
+    <div className="box-file-dropper-draggable">
       <DropFileInput
         onFileChange={(files: FileType[]) => onFileChange(files)}
       />
